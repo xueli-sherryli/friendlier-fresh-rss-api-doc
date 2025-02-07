@@ -1,0 +1,56 @@
+site_name: 更友好的 FreshRSS / Google Reader API 文档
+site_url: https://xueli-sherryli.github.io/friendlier-fresh-rss-api-doc
+repo_url: https://github.com/xueli-sherryli/friendlier-fresh-rss-api-doc
+repo_name: xueli-sherryli/friendlier-fresh-rss-api-doc
+nav:
+    - 主页: index.md
+    - 简介: brief.md
+    - 身份鉴权: auth.md
+    - API: 
+      - 获取操作: api/api_get.md
+      - 增加操作: api/api_add.md
+      - 编辑操作: api/api_edit.md
+      - 删除操作: api/api_del.md
+      - 阅读操作: api/api_read.md
+      - 搜索操作: api/api_search.md
+theme:
+  name: material
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      material_alternate: true
+      languages:
+        - locale: zh
+          default: true
+          name: 简体中文
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: Friendlier FreshRSS / Google Reader API Documentation
+          material_alternate: true
+          nav_translations:
+            主页: Home
+            简介: Introduction
+            身份鉴权: Authentication
+            获取操作: Get Methods
+            增加操作: Add Methods
+            编辑操作: Edit Methods
+            删除操作: Delete Methods
+            阅读操作: Read Methods
+            搜索操作: Search Methods
+  - search:
+        language: 'zh'
+        separator: '[\s\u200b\-]'
